@@ -1,0 +1,7 @@
+# -log10|fitted power-law index - expected|, clamped to [0, 6]; expected -1 (first order), -2 (second order)
+# rows: first order, second order; columns: temperature density velocity pressure
+0.3127 0.5449 0.1192 0.6271
+0.0000 0.0420 0.0000 0.0000
+# fitted indices (nan = missing):
+# -0.5132 -0.7148 -0.2401 -0.7640
+# -0.4694 -1.0922 -0.0502 -0.6465

@@ -1,0 +1,4 @@
+# F10: -log10(relative-error L1 norm), clamped to [0, 6]
+# radius(t) vs .txt | pressure(t) vs .txt | density_profile | velocity_profile | pressure_profile
+2.7459 2.4452 0.3437 1.7300 0.0000
+# raw L1: 1.7953e-03 3.5873e-03 4.5324e-01 1.8623e-02 2.1447e+04

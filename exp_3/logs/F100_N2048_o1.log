@@ -1,0 +1,5 @@
+[fo N=2048] snap 1 t=20.00 kyr steps=31414 wall=1.0s
+[fo N=2048] snap 2 t=40.00 kyr steps=62749 wall=1.9s
+[fo N=2048] snap 3 t=60.00 kyr steps=94084 wall=2.8s
+[fo N=2048] snap 4 t=80.00 kyr steps=125419 wall=3.7s
+[fo N=2048] snap 5 t=100.00 kyr steps=156754 wall=4.6s

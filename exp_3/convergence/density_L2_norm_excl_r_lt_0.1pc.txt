@@ -1,0 +1,6 @@
+# r >= 0.1 pc only
+# N  mean_relative_L2_first_order  mean_relative_L2_second_order
+  1024 1.089542e-01 4.382953e-02
+  2048 7.277687e-02 2.852545e-02
+  4096 4.487034e-02 3.814260e-02
+  8192 3.398777e-02 4.832432e-02

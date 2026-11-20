@@ -1,0 +1,5 @@
+[so N=8192] snap 1 t=20.00 kyr steps=134193 wall=39.6s
+[so N=8192] snap 2 t=40.00 kyr steps=268311 wall=78.0s
+[so N=8192] snap 3 t=60.00 kyr steps=402441 wall=118.1s
+[so N=8192] snap 4 t=80.00 kyr steps=536831 wall=157.3s
+[so N=8192] snap 5 t=100.00 kyr steps=671357 wall=196.5s

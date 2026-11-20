@@ -1,0 +1,5 @@
+[so N=4096] snap 1 t=20.00 kyr steps=67093 wall=9.4s
+[so N=4096] snap 2 t=40.00 kyr steps=134083 wall=18.9s
+[so N=4096] snap 3 t=60.00 kyr steps=201108 wall=28.4s
+[so N=4096] snap 4 t=80.00 kyr steps=268138 wall=38.0s
+[so N=4096] snap 5 t=100.00 kyr steps=335179 wall=47.7s

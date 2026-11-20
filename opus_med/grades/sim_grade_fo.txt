@@ -1,0 +1,17 @@
+# F100 simulation (fo) vs AdiabaticWind(rfb=0.5 pc): -log10(mean relative-error L1 over 0 < r < R_bubble(t)), clamped to [0, 6]
+# N  snap  t_kyr  density  pressure  velocity | raw L1: density  pressure  velocity
+    64     001   20.000  0.0000 0.0000 -0.0000 | 1.2730e+02 5.2187e+00 1.0000e+00
+    64     002   40.000  0.0000 0.0000 0.5281 | 5.4286e+01 1.9144e+00 2.9643e-01
+    64     003   60.000  0.0000 0.0000 0.8082 | 4.4292e+01 1.1687e+00 1.5552e-01
+    64     004   80.000  0.0000 0.0000 0.9325 | 3.8640e+01 1.0267e+00 1.1681e-01
+    64     005  100.000  0.0000 0.0000 0.9767 | 4.2921e+01 1.0963e+00 1.0550e-01
+     0 missing      nan  0.0000 0.0000 0.0000 | nan nan nan
+     0 missing      nan  0.0000 0.0000 0.0000 | nan nan nan
+     0 missing      nan  0.0000 0.0000 0.0000 | nan nan nan
+     0 missing      nan  0.0000 0.0000 0.0000 | nan nan nan
+     0 missing      nan  0.0000 0.0000 0.0000 | nan nan nan
+     0 missing      nan  0.0000 0.0000 0.0000 | nan nan nan
+     0 missing      nan  0.0000 0.0000 0.0000 | nan nan nan
+     0 missing      nan  0.0000 0.0000 0.0000 | nan nan nan
+     0 missing      nan  0.0000 0.0000 0.0000 | nan nan nan
+     0 missing      nan  0.0000 0.0000 0.0000 | nan nan nan

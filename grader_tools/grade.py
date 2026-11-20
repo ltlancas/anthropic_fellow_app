@@ -27,7 +27,8 @@ SAM_RFB = 100 * u.AU
 SAM_T_KYR = 100.0
 SIM_NH = 100.0
 SIM_RFB = 0.5 * u.pc
-N_RESOLUTIONS = 3
+SIM_RESOLUTIONS = [64, 128, 256]
+N_RESOLUTIONS = len(SIM_RESOLUTIONS)
 N_SNAPSHOTS = 5
 CONV_VARIABLES = ["temperature", "density", "velocity", "pressure"]
 CONV_EXPECTED_INDEX = {"fo": -1.0, "so": -2.0}
@@ -181,7 +182,10 @@ def grade_sim(ref_dir, notes):
         else:
             notes.append(f"sim: ignored {os.path.basename(path)} (name must be "
                          "F100_sim_VV_NXXXXX_snapYYY.csv, zero-padded, snapshots from 001)")
-    resolutions = sorted({N for _, N in found})
+    extra = sorted({N for _, N in found} - set(SIM_RESOLUTIONS))
+    if extra:
+        notes.append(f"sim: ignored unexpected resolutions {extra} (expected N = {SIM_RESOLUTIONS})")
+    resolutions = sorted({N for _, N in found} & set(SIM_RESOLUTIONS))
     if not os.path.isdir(sim_dir):
         notes.append("sim_outputs/ missing: all simulation grades are 0")
 
@@ -247,6 +251,10 @@ def grade_convergence(ref_dir, notes):
             except (FormatError, OSError) as e:
                 notes.append(f"convergence {var}: {e}")
                 continue
+            if sorted(data[:, 0].astype(int).tolist()) != SIM_RESOLUTIONS:
+                notes.append(f"convergence {var}: resolutions {data[:, 0].astype(int).tolist()} "
+                             f"!= expected {SIM_RESOLUTIONS}; only expected ones used")
+                data = data[np.isin(data[:, 0], SIM_RESOLUTIONS)]
             for i in range(len(ORDERS)):
                 N, l1 = data[:, 0], data[:, i + 1]
                 if len(N) < 2 or np.any(N <= 0) or np.any(l1 <= 0):

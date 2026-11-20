@@ -3,3 +3,4 @@ exp_?/__pycache__/
 exp_?/diagnostics/
 grader_tools/.venv/
 grader_tools/__pycache__/
+opus_low/venv/
